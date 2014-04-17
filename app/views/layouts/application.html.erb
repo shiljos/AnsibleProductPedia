@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProductPedia</title>
+    <%= stylesheet_link_tag    "application", "token-input", media: "all" %>
+    <%= javascript_include_tag "application", "jquery.tokeninput" %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render "layouts/header" %>
+
+<% if notice %>
+  <p class="alert alert-notice"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-error"><%= alert %></p>
+<% end %>
+
+<%= yield %>
+
+<!-- <%= render "layouts/footer"%> -->
+</body>
+</html>

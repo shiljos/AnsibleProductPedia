@@ -1,0 +1,13 @@
+<h1>Welcome to ProductPedia</h1>
+<%if user_signed_in?%> 
+  <div>
+    <ul class="feed">
+      <% current_user.feed.each do |f| %>    
+        <li>
+          <span class="content"><%= f.info %></span>
+          <span class="feedproduct">  <%= f.product.name%> : <%= f.created_at%> </span>
+        </li>
+      <%end%>
+    </ul>
+  </div>
+<%end%>
