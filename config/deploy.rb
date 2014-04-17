@@ -32,6 +32,7 @@ set(:config_files, %w(
   unicorn_init
 ))
 
+set :tests, ["spec"]
 # set(:executable_config_files, %w(
 #   unicorn_init
 # ))
